@@ -63,7 +63,16 @@ p{
   border-style: ridge;
   height: 300px;
   width: 320px;
+}
 
+.ava {
+  background-color: green;
+}
 
+.res {
+  background-color: red;
+}
 
+.sel {
+  background-color: #1981e0;
 }
