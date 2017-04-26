@@ -39,4 +39,7 @@ $(function() {
       seatArray[seatIds.indexOf(id)].status = "ava";
     }
   });
+  $('#reserve').on('click', function() {
+    $('#info').css('display', 'block');
+  });
 });
