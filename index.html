@@ -19,29 +19,58 @@
       <header>
 
         <ul class="text-center">
-          <li><span class="glyphicon glyphicon-one-fine-dot"></span> :Available</li>
-          <li><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span> :Unavailable</li>
-          <li><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> :Selected</li>
+          <li><span class="glyphicon glyphicon-one-fine-dot green"></span> :Available</li>
+          <li><span class="glyphicon glyphicon-one-fine-dot red" aria-hidden="true"></span> :Unavailable</li>
+          <li><span class="glyphicon glyphicon-one-fine-dot blue" aria-hidden="true"></span> :Selected</li>
         </ul>
-        <p>Select your seat below (seat numbers appear here) <button>Reserve</button></p>
+        <p class="text-center">Select your seat below (seat numbers appear here) <button class= "btn btn-default">Reserve</button></p>
       </header>
 
       <main>
         <div class="row">
           <div class="col-xs-4 col-xs-offset-4">
             <div class="row">
-              <div class="col-xs-4">
-                <button>A1</button>
-              </div>
-              <div class="col-xs-4">
-                <button>A2</button>
-              </div>
-              <div class="col-xs-4">
-                <button>A3</button>
-              </div>
+              <!--ROW A BUTTON SEATS-->
+              <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                    <div class="btn-group" role="group">
+                      <button id="a1" type="button" class="btn btn-default">A1</button>
+                    </div>
+                    <div class="btn-group" role="group">
+                      <button id="a2" type="button" class="btn btn-default">A2</button>
+                    </div>
+                    <div class="btn-group" role="group">
+                      <button id="a3" type="button" class="btn btn-default">A3</button>
+                    </div>
+                  </div>
+
+
+
+
             </div>
             <div class="row">
-              <div class="col-xs-4">
+
+              <!--ROW B BUTTON SEATS-->
+              <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                    <div class="btn-group" role="group">
+                      <button id="b1" type="button" class="btn btn-default">B1</button>
+                    </div>
+                    <div class="btn-group" role="group">
+                      <button id="b2" type="button" class="btn btn-default">B2</button>
+                    </div>
+                    <div class="btn-group" role="group">
+                      <button id="b3" type="button" class="btn btn-default">B3</button>
+                    </div>
+                  </div>
+
+
+
+
+
+
+
+
+
+              <!--<div class="col-xs-4">
                 <button>B1</button>
               </div>
               <div class="col-xs-4">
@@ -49,7 +78,7 @@
               </div>
               <div class="col-xs-4">
                 <button>B3</button>
-              </div>
+              </div>-->
             </div>
           </div>
         </div>
@@ -57,26 +86,26 @@
           <div class="col-xs-2 col-xs-offset-2">
             <div class="row">
               <div class="col-xs-6">
-                <button>C1</button>
+                <button id="c1" >C1</button>
               </div>
               <div class="col-xs-6">
-                <button>D1</button>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-6">
-                <button>C2</button>
-              </div>
-              <div class="col-xs-6">
-                <button>D2</button>
+                <button id="d1" >D1</button>
               </div>
             </div>
             <div class="row">
               <div class="col-xs-6">
-                <button>C3</button>
+                <button id="c2" >C2</button>
               </div>
               <div class="col-xs-6">
-                <button>D3</button>
+                <button id="d2" >D2</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <button id="c3" >C3</button>
+              </div>
+              <div class="col-xs-6">
+                <button id="d3" >D3</button>
               </div>
             </div>
           </div>
@@ -86,26 +115,26 @@
           <div class="col-xs-2">
             <div class="row">
               <div class="col-xs-6">
-                <button>E1</button>
+                <button id="e1" >E1</button>
               </div>
               <div class="col-xs-6">
-                <button>F1</button>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-6">
-                <button>E2</button>
-              </div>
-              <div class="col-xs-6">
-                <button>F2</button>
+                <button id="f1" >F1</button>
               </div>
             </div>
             <div class="row">
               <div class="col-xs-6">
-                <button>E3</button>
+                <button id="e2" >E2</button>
               </div>
               <div class="col-xs-6">
-                <button>F3</button>
+                <button id="f2" >F2</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <button id="e3" >E3</button>
+              </div>
+              <div class="col-xs-6">
+                <button id="f3" >F3</button>
               </div>
             </div>
           </div>
@@ -114,24 +143,24 @@
           <div class="col-xs-4 col-xs-offset-4">
             <div class="row">
               <div class="col-xs-4">
-                <button>G1</button>
+                <button id="g1" >G1</button>
               </div>
               <div class="col-xs-4">
-                <button>G2</button>
+                <button id="g2" >G2</button>
               </div>
               <div class="col-xs-4">
-                <button>G3</button>
+                <button id="g3" >G3</button>
               </div>
             </div>
             <div class="row">
               <div class="col-xs-4">
-                <button>H1</button>
+                <button id="h1" >H1</button>
               </div>
               <div class="col-xs-4">
-                <button>H2</button>
+                <button id="h2" >H2</button>
               </div>
               <div class="col-xs-4">
-                <button>H3</button>
+                <button id="h3" >H3</button>
               </div>
             </div>
           </div>

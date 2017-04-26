@@ -32,15 +32,32 @@ li{
 
 /*glyphicon available Dot styling*/
 .glyphicon.glyphicon-one-fine-dot {
-    margin-bottom: -.1em;
+    margin-bottom: -.25em;
     overflow: hidden;
 }
 .glyphicon.glyphicon-one-fine-dot:before {
     content:"\25cf";
     font-size: 2em;
-    color: green;
+
 }
 
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.blue {
+  color: #1981e0;
+}
+
+p{
+  font-family: 'Timmana', sans-serif;
+  font-size: 170%;
+
+}
 /* BOXING Ring*/
 #boxingRing {
   border-style: ridge;
