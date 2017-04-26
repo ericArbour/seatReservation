@@ -26,7 +26,7 @@ li{
   display: inline-block;
   font-family: 'Timmana', sans-serif;
   font-size: 150%;
-  padding: 12px 20px;
+  /*padding: 12px 20px;*/
 }
 
 
@@ -80,6 +80,6 @@ p{
   display: none;
 }*/
 
-#basic-addon1 {
-  
+.formTitle {
+  font-family: 'Timmana', sans-serif;
 }
