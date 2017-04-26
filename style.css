@@ -61,8 +61,7 @@ p{
 /* BOXING Ring*/
 #boxingRing {
   border-style: ridge;
-  height: 300px;
-  width: 320px;
+  height: 100%;
 }
 
 .ava {
@@ -75,4 +74,8 @@ p{
 
 .sel {
   background-color: #1981e0;
+}
+
+#info{
+  display: none;
 }
