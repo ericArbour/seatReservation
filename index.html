@@ -23,7 +23,9 @@
           <li><span class="glyphicon glyphicon-one-fine-dot red" aria-hidden="true"></span> :Unavailable</li>
           <li><span class="glyphicon glyphicon-one-fine-dot blue" aria-hidden="true"></span> :Selected</li>
         </ul>
-        <p class="text-center">Select your seat below (seat numbers appear here) <button id="reserve" class= "btn btn-default">Reserve</button></p>
+        <p class="text-center">Select your seat below <button id="reserve" class= "btn btn-default">Reserve</button></p>
+        <p id="clickedSeats"></p>
+
       </header>
 
       <main>
@@ -187,30 +189,31 @@
           </div>
         </div>
       </main>
+
       <section id="info">
         <form>
-          <h2>Please enter your intimate information</h2>
+          <h2 class="formTitle">Please enter your information</h2>
           <div class="input-group">
             <span class="input-group-addon" id="basic-addon1">First Name</span>
-            <input type="text" class="form-control" placeholder="Enter First Name" aria-describedby="basic-addon1">
+            <input id="fName" type="text" class="form-control" placeholder="Enter First Name" aria-describedby="basic-addon1">
           </div>
             <br>
 
           <div class="input-group">
             <span class="input-group-addon" id="basic-addon1">Last Name</span>
-            <input type="text" class="form-control" placeholder="Enter Last Name" aria-describedby="basic-addon1">
+            <input id="lName" type="text" class="form-control" placeholder="Enter Last Name" aria-describedby="basic-addon1">
           </div>
           <br>
 
           <div class="input-group">
             <span class="input-group-addon" id="basic-addon1">Phone #</span>
-            <input type="text" class="form-control" placeholder="(555)-555-5555" aria-describedby="basic-addon1">
+            <input id="phone" type="text" class="form-control" placeholder="(555)-555-5555" aria-describedby="basic-addon1">
           </div>
           <br>
 
           <div class="input-group">
             <span class="input-group-addon" id="basic-addon1">Email</span>
-            <input type="text" class="form-control" placeholder="jonsmith@example.com" aria-describedby="basic-addon1">
+            <input id="email" type="text" class="form-control" placeholder="jonsmith@example.com" aria-describedby="basic-addon1">
           </div>
           <br>
 
@@ -223,6 +226,7 @@
 
         </form>
       </section>
+
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
