@@ -1,1 +1,52 @@
+/*
+GOOGLE Fonts reference(remove what isn't used)
+font-family: 'Shrikhand', cursive;  HEADER
+font-family: 'Cabin', sans-serif;  body
+font-family: 'Timmana', sans-serif;  body
+font-family: 'Bungee Shade', cursive; HEADER
+*/
 
+
+h1 {
+  font-family: 'Bungee Shade', cursive;
+  letter-spacing: 2px;
+  word-spacing: 7px;
+  text-align: center;
+  font-size: 200%;
+  line-height: 120%;
+}
+/* available seats styling 'key'!*/
+ul {
+  list-style-type: none;
+  padding: 0px;
+
+}
+
+li{
+  display: inline-block;
+  font-family: 'Timmana', sans-serif;
+  font-size: 150%;
+  padding: 12px 20px;
+}
+
+
+/*glyphicon available Dot styling*/
+.glyphicon.glyphicon-one-fine-dot {
+    margin-bottom: -.1em;
+    overflow: hidden;
+}
+.glyphicon.glyphicon-one-fine-dot:before {
+    content:"\25cf";
+    font-size: 2em;
+    color: green;
+}
+
+/* BOXING Ring*/
+#boxingRing {
+  border-style: ridge;
+  height: 300px;
+  width: 320px;
+
+
+
+}

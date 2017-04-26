@@ -4,20 +4,28 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet" type="text/css">
+<!--link to special google fonts stylesheet-->
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Cabin|Shrikhand|Timmana" rel="stylesheet">
+
     <meta charset="utf-8">
     <title>Raging Squirrel Boxing Arena</title>
   </head>
   <body>
     <div class="container">
+      <div class="jumbotron">
+        <h1>Raging Squirrel Arena</h1>
+            <!--<h2>Boxing Arena</h2> Possible name change to our fake site??-->
+      </div>
       <header>
-        <h1>Raging Squirrel Boxing Arena</h1>
-        <ul class="key">
-          <li>:Available</li>
-          <li>:Unavailable</li>
-          <li>:Selected</li>
+
+        <ul class="text-center">
+          <li><span class="glyphicon glyphicon-one-fine-dot"></span> :Available</li>
+          <li><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span> :Unavailable</li>
+          <li><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> :Selected</li>
         </ul>
         <p>Select your seat below (seat numbers appear here) <button>Reserve</button></p>
       </header>
+
       <main>
         <div class="row">
           <div class="col-xs-4 col-xs-offset-4">
@@ -72,8 +80,8 @@
               </div>
             </div>
           </div>
-          <div class="col-xs-4">
-            ring
+          <div  class="col-xs-4">
+            <p id="boxingRing">ring</p>
           </div>
           <div class="col-xs-2">
             <div class="row">
