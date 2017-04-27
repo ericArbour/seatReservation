@@ -26,6 +26,7 @@ $(function() {
     {number: "h3", status: "ava", who: ""}
   ];
   var seatIds = ["a1", "a2", "a3", "b1", "b2", "b3", "c1", "c2", "c3", "d1", "d2", "d3", "e1", "e2", "e3", "f1", "f2", "f3", "g1", "g2", "g3", "h1", "h2", "h3"];
+  var selected = [];
   for (var i = 0; i < seatArray.length; i++) {
     $('#' + seatArray[i].number).addClass(seatArray[i].status).attr('title', seatArray[i].who);
   }
@@ -34,12 +35,21 @@ $(function() {
     if ($(this).hasClass('ava')) {
       $(this).toggleClass('ava sel');
       seatArray[seatIds.indexOf(id)].status = "sel";
+      selected.push(id);
     } else if ($(this).hasClass('sel')) {
       $(this).toggleClass('sel ava');
       seatArray[seatIds.indexOf(id)].status = "ava";
+      selected.splice(selected.indexOf(id), 1);
     }
+      var displayArray = [];
+      selected.forEach(function(item) {
+        displayArray.push(item[0].toUpperCase() + item[1]);
+      });
+    $('#clickedSeats').text(displayArray.join(', '));
   });
-  $('#reserve').on('click', function() {
-    $('#info').css('display', 'block');
+  $('#submit').on('click', function() {
+    selected.forEach(function(item) {
+
+    });
   });
 });
