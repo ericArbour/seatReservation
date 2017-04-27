@@ -26,17 +26,27 @@ $(function() {
     {number: "H2", status: "ava", who: ""},
     {number: "H3", status: "ava", who: ""}
   ];
+
   // another array of just the seat numbers short to find the right id and direct to correct index in seatArray
   var seatIds = ["A1", "A2", "A3", "B1", "B2", "B3", "C1", "C2", "C3", "D1", "D2", "D3", "E1", "E2", "E3", "F1", "F2", "F3", "G1", "G2", "G3", "H1", "H2", "H3"];
+  //array for seats the user has selected
   var selected = [];
-  //when page is loaded this loop assigns classes to each seat, populates info on each html tag
-  for (var i = 0; i < seatArray.length; i++) {
-  //it selects the value for the property for the current loop item, concatonates into an id to target html element
-    $('#' + seatArray[i].number).addClass(seatArray[i].status).attr('title', seatArray[i].who);
-  }
-  //when the seat class(the buttons) is clicked it will toggle class based on current status and change it.
-  $('.seat').on('click', seatClicker);
 
+  init();
+
+  //Event handlers for seat selection and form submission
+  $('.seat').on('click', seatClicker);
+  $('#submit').on('click', submitter);
+
+  function init () {
+    //when page is loaded this loop assigns classes to each seat, populates info on each html tag
+    for (var i = 0; i < seatArray.length; i++) {
+    //it selects the value for the property for the current loop item, concatonates into an id to target html element
+      $('#' + seatArray[i].number).addClass(seatArray[i].status).attr('title', seatArray[i].who);
+    }
+  }
+
+  //when the seat class(the buttons) is clicked it will toggle class based on current status and change it.
   function seatClicker () {
     var id = $(this).attr('id');
     if ($(this).hasClass('ava')) {
@@ -51,7 +61,7 @@ $(function() {
     $('#clickedSeats').text(selected.join(', '));
   }
 
-  $('#submit').on('click', function() {
+  function submitter () {
     for (var i = 0; i < seatArray.length; i++) {
       if (seatArray[i].status === "sel"){
         seatArray[i].status = "res";
@@ -61,5 +71,6 @@ $(function() {
     }
     $('.form-control').val('');
     $('#clickedSeats').text('');
-  });
+  }
+
 });
