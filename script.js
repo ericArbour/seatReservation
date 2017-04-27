@@ -1,33 +1,33 @@
 $(function() {
   // array of objects that have seat property and value pairs.
   var seatArray = [
-    {number: "a1", status: "ava", who: ""},
-    {number: "a2", status: "res", who: "Smelly Squirrel"},
-    {number: "a3", status: "res", who: "Drunk Squirrel"},
-    {number: "b1", status: "ava", who: ""},
-    {number: "b2", status: "ava", who: ""},
-    {number: "b3", status: "ava", who: ""},
-    {number: "c1", status: "ava", who: ""},
-    {number: "c2", status: "ava", who: ""},
-    {number: "c3", status: "ava", who: ""},
-    {number: "d1", status: "ava", who: ""},
-    {number: "d2", status: "ava", who: ""},
-    {number: "d3", status: "ava", who: ""},
-    {number: "e1", status: "ava", who: ""},
-    {number: "e2", status: "res", who: "Big Hair Squirrel"},
-    {number: "e3", status: "ava", who: ""},
-    {number: "f1", status: "ava", who: ""},
-    {number: "f2", status: "ava", who: ""},
-    {number: "f3", status: "ava", who: ""},
-    {number: "g1", status: "res", who: "Sexy Squirrel"},
-    {number: "g2", status: "ava", who: ""},
-    {number: "g3", status: "ava", who: ""},
-    {number: "h1", status: "ava", who: ""},
-    {number: "h2", status: "ava", who: ""},
-    {number: "h3", status: "ava", who: ""}
+    {number: "A1", status: "ava", who: ""},
+    {number: "A2", status: "res", who: "Smelly Squirrel"},
+    {number: "A3", status: "res", who: "Drunk Squirrel"},
+    {number: "B1", status: "ava", who: ""},
+    {number: "B2", status: "ava", who: ""},
+    {number: "B3", status: "ava", who: ""},
+    {number: "C1", status: "ava", who: ""},
+    {number: "C2", status: "ava", who: ""},
+    {number: "C3", status: "ava", who: ""},
+    {number: "D1", status: "ava", who: ""},
+    {number: "D2", status: "ava", who: ""},
+    {number: "D3", status: "ava", who: ""},
+    {number: "E1", status: "ava", who: ""},
+    {number: "E2", status: "res", who: "Big Hair Squirrel"},
+    {number: "E3", status: "ava", who: ""},
+    {number: "F1", status: "ava", who: ""},
+    {number: "F2", status: "ava", who: ""},
+    {number: "F3", status: "ava", who: ""},
+    {number: "G1", status: "res", who: "Sexy Squirrel"},
+    {number: "G2", status: "ava", who: ""},
+    {number: "G3", status: "ava", who: ""},
+    {number: "H1", status: "ava", who: ""},
+    {number: "H2", status: "ava", who: ""},
+    {number: "H3", status: "ava", who: ""}
   ];
   // another array of just the seat numbers short to find the right id and direct to correct index in seatArray
-  var seatIds = ["a1", "a2", "a3", "b1", "b2", "b3", "c1", "c2", "c3", "d1", "d2", "d3", "e1", "e2", "e3", "f1", "f2", "f3", "g1", "g2", "g3", "h1", "h2", "h3"];
+  var seatIds = ["A1", "A2", "A3", "B1", "B2", "B3", "C1", "C2", "C3", "D1", "D2", "D3", "E1", "E2", "E3", "F1", "F2", "F3", "G1", "G2", "G3", "H1", "H2", "H3"];
   var selected = [];
   //when page is loaded this loop assigns classes to each seat, populates info on each html tag
   for (var i = 0; i < seatArray.length; i++) {
@@ -35,7 +35,9 @@ $(function() {
     $('#' + seatArray[i].number).addClass(seatArray[i].status).attr('title', seatArray[i].who);
   }
   //when the seat class(the buttons) is clicked it will toggle class based on current status and change it.
-  $('.seat').on('click', function() {
+  $('.seat').on('click', seatClicker);
+
+  function seatClicker () {
     var id = $(this).attr('id');
     if ($(this).hasClass('ava')) {
       $(this).toggleClass('ava sel');
@@ -46,12 +48,8 @@ $(function() {
       seatArray[seatIds.indexOf(id)].status = "ava";
       selected.splice(selected.indexOf(id), 1);
     }
-      var displayArray = [];
-      selected.forEach(function(item) {
-        displayArray.push(item[0].toUpperCase() + item[1]);
-      });
-    $('#clickedSeats').text(displayArray.join(', '));
-  });
+    $('#clickedSeats').text(selected.join(', '));
+  }
 
   $('#submit').on('click', function() {
     for (var i = 0; i < seatArray.length; i++) {
@@ -59,9 +57,9 @@ $(function() {
         seatArray[i].status = "res";
         seatArray[i].who = $('#fName').val() + ' ' + $('#lName').val();
         $('#' + seatArray[i].number).removeClass('sel').addClass(seatArray[i].status).attr('title', seatArray[i].who);
-        $('.form-control').val('');
-        $('#clickedSeats').text('');
       }
     }
+    $('.form-control').val('');
+    $('#clickedSeats').text('');
   });
 });
