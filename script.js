@@ -3,7 +3,7 @@ $(function() {
   var seatArray = [
     {number: "A1", status: "ava", who: ""},
     {number: "A2", status: "res", who: "Smelly Squirrel"},
-    {number: "A3", status: "res", who: "Drunk Squirrel"},
+    {number: "A3", status: "res", who: "Angry Squirrel"},
     {number: "B1", status: "ava", who: ""},
     {number: "B2", status: "ava", who: ""},
     {number: "B3", status: "ava", who: ""},
@@ -19,7 +19,7 @@ $(function() {
     {number: "F1", status: "ava", who: ""},
     {number: "F2", status: "ava", who: ""},
     {number: "F3", status: "ava", who: ""},
-    {number: "G1", status: "res", who: "Sexy Squirrel"},
+    {number: "G1", status: "res", who: "Cool Squirrel"},
     {number: "G2", status: "ava", who: ""},
     {number: "G3", status: "ava", who: ""},
     {number: "H1", status: "ava", who: ""},
