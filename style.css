@@ -5,6 +5,36 @@ font-family: 'Cabin', sans-serif;  body
 font-family: 'Timmana', sans-serif;  body
 font-family: 'Bungee Shade', cursive; HEADER
 */
+/*
+html {
+background: url(images/st-of-rage.png) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}*/
+
+body {
+    background-color: transparent;
+    /*height: 200px;*/
+    background: #000000; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#000000, #001f3a); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#000000, #001f3a); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#000000, #001f3a); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#000000, #001f3a); /* Standard syntax (must be last) */
+}
+
+
+
+#jumboImg{
+  background-image: url(images/st-of-rage-copy.png);
+  background-size: cover;
+}
+
+#arenaName{
+  color: #da4300;
+
+}
 
 
 h1 {
@@ -26,6 +56,7 @@ li{
   display: inline-block;
   font-family: 'Timmana', sans-serif;
   font-size: 150%;
+  color: #cccccc;
   /*padding: 12px 20px;*/
 }
 
@@ -42,41 +73,50 @@ li{
 }
 
 .green {
-  color: green;
+  color: #117808;
 }
 
 .red {
-  color: red;
+  color: #8a1c00;
 }
 
 .blue {
-  color: #1981e0;
+  color: #297ba3;
 }
 
 p{
   font-family: 'Timmana', sans-serif;
   font-size: 170%;
-
+ color: #cccccc;
 }
 /* BOXING Ring*/
 #boxingRing {
   border-style: ridge;
-  height: 100%;
+  height: 100px;
+  border-radius: 50px;
+
 }
 
 .ava {
-  background-color: green;
+  background-color: #117808;
 }
 
 .res {
-  background-color: red;
+  background-color: #8a1c00;
 }
 
 .sel {
-  background-color: #1981e0;
+  background-color: #297ba3;
 }
 
 
 .formTitle {
   font-family: 'Timmana', sans-serif;
+}
+
+#footText {
+  font-size: 100%;
+  margin: 20px 0px;
+  color: #da4300;
+
 }
