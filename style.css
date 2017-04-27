@@ -84,6 +84,10 @@ li{
   color: #297ba3;
 }
 
+#clickedSeats{
+  min-height: 40px;
+}
+
 p{
   font-family: 'Timmana', sans-serif;
   font-size: 170%;
@@ -113,6 +117,11 @@ p{
 .formTitle {
   font-family: 'Timmana', sans-serif;
 }
+
+.modal-body {
+  background-color: #cccccc;
+}
+
 
 #footText {
   font-size: 100%;

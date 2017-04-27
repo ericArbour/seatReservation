@@ -34,6 +34,7 @@ $(function() {
   //it selects the value for the property for the current loop item, concatonates into an id to target html element
     $('#' + seatArray[i].number).addClass(seatArray[i].status).attr('title', seatArray[i].who);
   }
+  //when the seat class(the buttons) is clicked it will toggle class based on current status and change it.
   $('.seat').on('click', function() {
     var id = $(this).attr('id');
     if ($(this).hasClass('ava')) {
@@ -51,12 +52,16 @@ $(function() {
       });
     $('#clickedSeats').text(displayArray.join(', '));
   });
+
   $('#submit').on('click', function() {
     for (var i = 0; i < seatArray.length; i++) {
       if (seatArray[i].status === "sel"){
         seatArray[i].status = "res";
-        seatArray[i].who = $('#fName').text() + ' ' + $('#lName').text();
+        seatArray[i].who = $('#fName').val() + ' ' + $('#lName').val();
+        $('#' + seatArray[i].number).removeClass('sel').addClass(seatArray[i].status).attr('title', seatArray[i].who);
+        $('.form-control').val('');
+        $('#clickedSeats').text('');
       }
-    } console.log(seatArray);
+    }
   });
 });
