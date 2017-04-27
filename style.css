@@ -1,27 +1,12 @@
-/*
-GOOGLE Fonts reference(remove what isn't used)
-font-family: 'Shrikhand', cursive;  HEADER
-font-family: 'Cabin', sans-serif;  body
-font-family: 'Timmana', sans-serif;  body
-font-family: 'Bungee Shade', cursive; HEADER
-*/
-/*
-html {
-background: url(images/st-of-rage.png) no-repeat center center fixed;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-}*/
+
 
 body {
     background-color: transparent;
-    /*height: 200px;*/
-    background: #000000; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#000000, #001f3a); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#000000, #001f3a); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#000000, #001f3a); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#000000, #001f3a); /* Standard syntax (must be last) */
+    background: #000000;
+    background: -webkit-linear-gradient(#000000, #001f3a);
+    background: -o-linear-gradient(#000000, #001f3a);
+    background: -moz-linear-gradient(#000000, #001f3a);
+    background: linear-gradient(#000000, #001f3a); 
 }
 
 
@@ -127,6 +112,14 @@ p{
   font-family: 'Timmana', sans-serif;
   color: #da4300;
   font-size: 130%;
+}
+
+.close {
+  color: #da4300;
+  opacity: 1;
+}
+.close:hover{
+  color: #bfbfbf;
 }
 
 .modal-header{
