@@ -1,4 +1,5 @@
 $(function() {
+  // array of objects that have seat property and value pairs.
   var seatArray = [
     {number: "a1", status: "ava", who: ""},
     {number: "a2", status: "res", who: "Smelly Squirrel"},
@@ -25,9 +26,12 @@ $(function() {
     {number: "h2", status: "ava", who: ""},
     {number: "h3", status: "ava", who: ""}
   ];
+  // another array of just the seat numbers short to find the right id and direct to correct index in seatArray
   var seatIds = ["a1", "a2", "a3", "b1", "b2", "b3", "c1", "c2", "c3", "d1", "d2", "d3", "e1", "e2", "e3", "f1", "f2", "f3", "g1", "g2", "g3", "h1", "h2", "h3"];
   var selected = [];
+  //when page is loaded this loop assigns classes to each seat, populates info on each html tag
   for (var i = 0; i < seatArray.length; i++) {
+  //it selects the value for the property for the current loop item, concatonates into an id to target html element
     $('#' + seatArray[i].number).addClass(seatArray[i].status).attr('title', seatArray[i].who);
   }
   $('.seat').on('click', function() {
@@ -48,8 +52,11 @@ $(function() {
     $('#clickedSeats').text(displayArray.join(', '));
   });
   $('#submit').on('click', function() {
-    selected.forEach(function(item) {
-
-    });
+    for (var i = 0; i < seatArray.length; i++) {
+      if (seatArray[i].status === "sel"){
+        seatArray[i].status = "res";
+        seatArray[i].who = $('#fName').text() + ' ' + $('#lName').text();
+      }
+    } console.log(seatArray);
   });
 });
