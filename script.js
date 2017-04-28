@@ -33,10 +33,20 @@ $(function() {
   var selected = [];
 
   init();
-
+  $("#commentForm").validate();
   //Event handlers for seat selection and form submission
   $('.seat').on('click', seatClicker);
   $('#submit').on('click', submitter);
+  $('#reserve').on('click', reserver);
+
+  function reserver () {
+    if (selected.length > 0) {
+      $(this).attr('data-toggle', 'modal');
+      $(this).attr('data-target', '#info');
+    } else {
+      $('#clickedSeats').text('Please select your seats first');
+    }
+  }
 
   function init () {
     //when page is loaded this loop assigns classes to each seat, populates info on each html tag
@@ -69,6 +79,7 @@ $(function() {
         $('#' + seatArray[i].number).removeClass('sel').addClass(seatArray[i].status).attr('title', seatArray[i].who);
       }
     }
+    selected = [];
     $('.form-control').val('');
     $('#clickedSeats').text('');
   }
