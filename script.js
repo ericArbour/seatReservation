@@ -33,7 +33,7 @@ $(function() {
   var selected = [];
 
   init();
-  $("#commentForm").validate();
+
   //Event handlers for seat selection and form submission
   $('.seat').on('click', seatClicker);
   $('#submit').on('click', submitter);
